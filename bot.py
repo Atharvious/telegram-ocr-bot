@@ -13,10 +13,16 @@ API_KEY = os.getenv("token")
 scanner = TextScanner()
 
 bot = telebot.TeleBot(API_KEY)
+with open("help_message.txt", 'r') as f:
+    help_text = f.read()
+
 print("Bot Active.")
-@bot.message_handler(commands= ['greet'])
-def greet(message):
-    bot.reply_to(message, "Hey :)")
+
+
+@bot.message_handler(commands=['help', 'about'])
+def help(message):
+    bot.send_message(message.chat.id,help_text)
+
 @bot.message_handler(content_types=['photo'])
 def scan(message):
     #print(f"Photo: {message.photo}")

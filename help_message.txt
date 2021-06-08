@@ -1,0 +1,11 @@
+I am your personal little scanner, that extracts text from the images you send me.
+
+There are no specific commands that you need to learn, just send me a picture, and I'll send you the text in it!
+
+I just want you to striaghten the image for more accurate extraction (you can do this in the telegram app itself, just before sending).
+
+No data is handled/stored by any 3rd party service. It's only present in the telegram servers, as if you sent it to yourself.
+
+As of now, only english language is supported.
+
+*****created by @blackenblue*****
