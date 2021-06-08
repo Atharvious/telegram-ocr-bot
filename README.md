@@ -1,6 +1,4 @@
-# telegram-ocr-bot
-
-Nice and simple ocr bot for telegram. Built just because I didn't wanna install a seperate ocr app on my phone (and pc too for that matter).
+## Nice and simple ocr bot for telegram. Built just because I didn't wanna install a seperate ocr app on my phone (and pc too for that matter).
 
 The repository contains all the source code needed to reproduce the bot. The Dockerfile is pre-configured as well (but see the note below).
 
@@ -14,7 +12,7 @@ The repository contains all the source code needed to reproduce the bot. The Doc
 
 
 
-To see the bot in action, search for '**@tescannerbot**' in Telegram and add it.
+### To see the bot in action, search for '**@tescannerbot**' in Telegram and add it.
 
 Possible issues: 
 * If running on Linux, you might need to install the packeges in requirements.txt in a local environment, as opencv-python tends to face dependency problems.
