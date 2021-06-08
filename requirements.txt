@@ -1,0 +1,6 @@
+pytesseract
+numpy
+opencv-python
+pillow
+python-dotenv
+pyTelegramBotAPI
