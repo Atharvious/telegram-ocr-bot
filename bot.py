@@ -13,7 +13,7 @@ API_KEY = os.getenv("token")
 scanner = TextScanner()
 
 bot = telebot.TeleBot(API_KEY)
-
+print("Bot Active.")
 @bot.message_handler(commands= ['greet'])
 def greet(message):
     bot.reply_to(message, "Hey :)")
@@ -29,5 +29,6 @@ def scan(message):
     processed_image = scanner.pre_process(image)
     text = scanner.image_to_text(processed_image)
     bot.reply_to(message, text)
+    print("Just did a scan.")
 
 bot.polling()

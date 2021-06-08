@@ -1,5 +1,5 @@
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = "tesseract/tesseract.exe"
+#pytesseract.pytesseract.tesseract_cmd = "tesseract/tesseract.exe"
 import cv2
 from PIL import Image
 import numpy as np
