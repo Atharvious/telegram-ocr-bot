@@ -1,6 +1,9 @@
 #--------------------------Imports--------------------------
 
 #For Extractive Summarization
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.cluster.util import cosine_distance
@@ -8,9 +11,9 @@ import numpy as np
 import networkx as nx
 
 #For Abstract Summarization
-import torch
-import json
-from transformers import T5Tokenizer, T5ForConditionalGeneration, T5Config
+#import torch
+#import json
+#from transformers import T5Tokenizer, T5ForConditionalGeneration, T5Config
 
 #--------------------------Extractive Classificaiton--------------------------
 class ExtractiveSummarizer:
@@ -60,7 +63,7 @@ class ExtractiveSummarizer:
         return summary
 
 #-----------------------------------------------Abstract Classification--------------------------------------------
-class AbstractSummarizer:
+"""class AbstractSummarizer:
     def __init__(self):
         self.model = T5ForConditionalGeneration.from_pretrained('t5-small')
         self.tokenizer = T5Tokenizer.from_pretrained('t5-small')
@@ -82,7 +85,7 @@ class AbstractSummarizer:
         summary = self.tokenizer.decode(summary_ids[0],
                     skip_special_tokens = True,
         )
-        return summary
+        return summary"""
 #--------------------------------------------------Test Function--------------------------------------------------
 
 def test():
@@ -91,15 +94,15 @@ def test():
     print(f"Sample Text:\n{sample_text}\n Number of Characters:\t {len(sample_text)}\n\n")
 
 
-    Asummarizer = AbstractSummarizer()
+    #Asummarizer = AbstractSummarizer()
     Esummarizer = ExtractiveSummarizer()
 
 
     extractive_summary = Esummarizer.summarize(sample_text)
     print(f"Extractive Summary:\n{extractive_summary}\n Number of Characters:\t {len(extractive_summary)}\n\n")
 
-    abstract_summary = Asummarizer.summarize(sample_text)
-    print(f"Abstract Summary:\n{abstract_summary}\n Number of Characters:\t {len(abstract_summary)}")
+    #abstract_summary = Asummarizer.summarize(sample_text)
+    #print(f"Abstract Summary:\n{abstract_summary}\n Number of Characters:\t {len(abstract_summary)}")
 
 #-----------------------------------------------------------------------------------------------------------------
 if __name__ == '__main__':

@@ -13,6 +13,6 @@ ADD . /tesseract-python
 WORKDIR /tesseract-python
 
 RUN apt-get install ffmpeg libsm6 libxext6  -y
-RUN pip install pytesseract numpy opencv-python pillow python-dotenv pyTelegramBotAPI nltk
+RUN pip install pytesseract numpy opencv-python pillow python-dotenv pyTelegramBotAPI nltk networkx
 
 CMD ["python", "./bot.py"]
