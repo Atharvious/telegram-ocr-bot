@@ -17,6 +17,11 @@ class ExtractiveSummarizer:
     def __init__(self):
         self.stop_words = set(stopwords.words("english"))
 
+
+    def statistics(self, text):
+        num_words = len(word_tokenize(text))
+        num_sentences = len(sent_tokenize(text))
+        return num_words, num_sentences
     def summarize(self, text):
         words = word_tokenize(text)
         sentences = sent_tokenize(text)
