@@ -4,7 +4,6 @@ import cv2
 from PIL import Image
 import numpy as np
 class TextScanner():
-
     def __init__(self):
         pass
 
